@@ -2,7 +2,8 @@
 
 This repo includes a simple example showing how the `get-it` library correctly handles cookies on redirects.
 
-1. `git clone ...`
+1. `git clone git@github.com:rexxars/get-it-cookie-redirect-repro.git`
+1. `cd get-it-cookie-redirect-repro`
 1. `npm install`
 1. `npm start`
 1. Observe node.js do HTTP requests with correct behavior (no cookie on redirect)
