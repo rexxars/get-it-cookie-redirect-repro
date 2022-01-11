@@ -24,6 +24,11 @@ async function createServers() {
     const same = host.replace(/:\d+/, '')
     const diff = host.startsWith('localhost') ? '127.0.0.1' : 'localhost'
     const url = `http://${req.query.diff ? diff : same}:3001`
+
+    if (req.query.setCookie) {
+      res.cookie('fromDirect', 'yep', {path: '/', sameSite: 'lax', httpOnly: true})
+    }
+
     res.redirect(url)
   })
 

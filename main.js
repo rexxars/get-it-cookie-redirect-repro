@@ -29,10 +29,26 @@ document.getElementById('redirect-request').addEventListener('click', () => {
     .catch(err => console.error(err))
 })
 
+document.getElementById('set-cookie-redirect-request').addEventListener('click', () => {
+  log('GET ' + window.location.origin + '/redirect?setCookie=true')
+  log('(expect cookie, since it is the same host, different port)')
+  request({url: '/redirect?setCookie=true', withCredentials: true})
+    .then(response => log(response.body))
+    .catch(err => console.error(err))
+})
+
 document.getElementById('redirect-request-diff-host').addEventListener('click', () => {
   log('GET ' + window.location.origin + '/redirect?diff=host')
   log('(expect no cookie, since it is different host)')
   request({url: '/redirect/?diff=host', withCredentials: true})
+    .then(response => log(response.body))
+    .catch(err => console.error(err))
+})
+
+document.getElementById('set-cookie-redirect-request-diff-host').addEventListener('click', () => {
+  log('GET ' + window.location.origin + '/redirect?diff=host&setCookie=true')
+  log('(expect no cookie, since it is different host)')
+  request({url: '/redirect/?diff=host&setCookie=true', withCredentials: true})
     .then(response => log(response.body))
     .catch(err => console.error(err))
 })
