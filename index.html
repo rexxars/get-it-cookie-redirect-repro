@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get-it cookie test</title>
+    <style>button {margin: 5px;}</style>
+  </head>
+  <body>
+    <div id="app" style="display: none;">
+      <section>
+        <button type="button" id="set-cookie">Set/check cookie</button><br/>
+        <button type="button" id="redirect-request" disabled>Send redirect request (to same host, different port)</button><br/>
+        <button type="button" id="redirect-request-diff-host" disabled>Send redirect request (to different host + port)</button><br/>
+        <button type="button" id="direct-request" disabled>Send direct request (to same host, different port)</button><br/>
+        <button type="button" id="direct-request-diff-host" disabled>Send direct request (to different host + port)</button><br/>
+      </section>
+
+      <pre><code id="log"></code></pre>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
