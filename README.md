@@ -1,5 +1,7 @@
 # get-it redirect cookie behavior
 
+This repo includes a simple example showing how the `get-it` library correctly handles cookies on redirects.
+
 1. `git clone ...`
 1. `npm install`
 1. `npm start`
